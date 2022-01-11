@@ -1,7 +1,7 @@
 // declare the module so that I can still use "strict" mode
 declare module "node-bigcommerce" {
   export = BigCommerce;
-};
+}
 
 declare class BigCommerce {
   constructor(
@@ -19,12 +19,12 @@ declare class BigCommerce {
   );
 
   verify(signedRequest: any): BcVerifyResponse;
-  async authorize(query: any): Promise<BcAuthResponse>;
-  async request(type: "GET" | "POST" | "PUT" | "DELETE", path: string, data?: any): Promise<any>;
-  async get(path: string): Promise<any>;
-  async post(path: string, data: any): Promise<any>;
-  async put(path: string, data: any): Promise<any>;
-  async delete(path: string): Promise<any>;
+  authorize(query: any): Promise<BcAuthResponse>;
+  request(type: "GET" | "POST" | "PUT" | "DELETE", path: string, data?: any): Promise<any>;
+  get(path: string): Promise<any>;
+  post(path: string, data: any): Promise<any>;
+  put(path: string, data: any): Promise<any>;
+  delete(path: string): Promise<any>;
 }
 
 interface BcAuthResponse {
