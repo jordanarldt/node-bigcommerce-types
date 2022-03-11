@@ -4,6 +4,15 @@ declare module "node-bigcommerce" {
 }
 
 declare class BigCommerce {
+  logLevel: "info";
+  clientId: string;
+  secret: string;
+  callback: string;
+  accessToken: string;
+  storeHash: string;
+  responseType: "json" | "xml" | string;
+  apiVersion: "v2" | "v3" | string;
+  
   constructor(
     config: {
       logLevel?: "info";
